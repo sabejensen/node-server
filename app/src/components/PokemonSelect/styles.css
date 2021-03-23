@@ -1,0 +1,49 @@
+.selector {
+    background-color: #ddd;
+    color: rgb(94, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    height: 160px;
+    width: 210px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.arrow {
+    width: 40px;
+    background-color: #ddd;
+    height: 100%;
+}
+.arrow p {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    padding-top: 38px;
+}
+.arrow:hover {
+    background-color: #ccc;
+}
+.arrow:active {
+    background-color: #ccc;
+}
+.icon {
+    max-width: 50%;
+    align-self: center;
+    width: 120px;
+    margin-top: 40px;
+}
+
+@keyframes Loading-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .icon {
+      animation: Loading-logo-spin infinite 1.2s linear;
+    }
+  }
