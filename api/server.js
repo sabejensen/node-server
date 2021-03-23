@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const axios = require('axios')
 const MongoClient = require("mongodb").MongoClient
 const mongoose = require('mongoose')
+const path = require('path');
 
 const app = express()
 const router = express.Router();
@@ -17,6 +18,8 @@ const mongoConnect = require('./util/database')
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const server = http.createServer(app)
+
+app.use(express.static(path.resolve(__dirname, '../app/build')))
 
 server.listen(3080, () => {
     MongoClient.connect('mongodb+srv://pokeadmin:GPzq9oYhFQrEffvU@cluster0.obhnr.mongodb.net/teams?retryWrites=true&w=majority', { useNewUrlParser: true })
@@ -127,5 +130,5 @@ app.get('/current-team', (req, res, next) => {
 })
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../app/build', 'index.html'));
   });
