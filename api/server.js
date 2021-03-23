@@ -19,8 +19,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 const server = http.createServer(app)
 
-app.use(express.static(path.resolve(__dirname, '../app/build')))
-
 server.listen(3080, () => {
     MongoClient.connect('mongodb+srv://pokeadmin:GPzq9oYhFQrEffvU@cluster0.obhnr.mongodb.net/teams?retryWrites=true&w=majority', { useNewUrlParser: true })
     .then((client) => {
@@ -100,35 +98,3 @@ for(let i = 1; i < 152; i++) {
         // res.json(pokemon)
       });
 }
-
-const teams = [];
-
-// app.post('/new-team', (req, res, next) => {
-//     // console.log(req.body.team.split(','), req.body.title)
-//     let currentTeam = {
-//         name: req.body.title,
-//         team: req.body.team.split(',')
-//     }
-//     database.collection("teams").insertOne(new Team(currentTeam), (err, res) => {
-//         if(err) throw err;
-//         console.log('Addition Successful')
-//         database.close();
-//     })
-//     res.redirect('/')
-// })
-
-router.route("/add-team").post((req, res) => {
-
-})
-
-// app.get('/new-team', (req, res, next) => {
-//     res.json(teams)
-// })
-
-app.get('/current-team', (req, res, next) => {
-    res.json(database.collection("teams"))
-})
-
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../app/build', 'index.html'));
-  });

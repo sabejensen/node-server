@@ -1,0 +1,4 @@
+api/node-modules
+app/node-modules
+app/build
+.DS-Store
