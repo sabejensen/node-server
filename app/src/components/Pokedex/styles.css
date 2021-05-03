@@ -1,0 +1,50 @@
+.wrapper {
+    background-color: #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+    width: 80%;
+    height: 80%;
+    margin-bottom: 50px;
+}
+.sprite-select {
+    background-color: #ddd;
+    color: rgb(94, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    height: 160px;
+    width: 210px;
+    border-radius: 10px;
+    margin: auto;
+}
+.alt-button {
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: #f00;
+    border: none;
+    color: #fff
+}
+.form-field {
+    color: #000;
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+.pk-input {
+    width: 200px;
+    height: 30px;
+    margin-top: 19px;
+}
+.pk-entry {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+.pk-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

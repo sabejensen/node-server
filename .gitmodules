@@ -1,0 +1,3 @@
+[submodule "graph_ql"]
+	path = graph_ql
+	url = https://github.com/seajensen/graph_ql.git
